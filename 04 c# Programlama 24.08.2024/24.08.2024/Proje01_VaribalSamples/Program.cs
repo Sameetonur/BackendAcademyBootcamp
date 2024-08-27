@@ -85,7 +85,7 @@ class Program
               ";
         System.Console.WriteLine("SONU:");
         System.Console.WriteLine();
-        System.Console.WriteLine(resulMessage);
+        System.Console.WriteLine(resulMessage); 
 
 
         #endregion
