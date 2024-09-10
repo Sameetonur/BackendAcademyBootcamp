@@ -1,11 +1,13 @@
-﻿namespace ArraysHomework;
+﻿using System.Reflection.PortableExecutable;
+
+namespace ArraysHomework;
 
 class Program
 {
     static void Main(string[] args)
     {
         #region soru1
-
+        //10 elemanlı rastgele değerlerden oluşan bir tam sayı dizisi içinde, dizinin her bir elemanının yalnızca bir önceki ve bir sonraki elemanı ile kıyaslandığı bir algoritma yazın. Bu algoritma, yalnızca kendinden önceki sayı ve kendinden sonraki sayı büyük olan elemanları bulmalı ve bunları ekrana yazdırmalıdır.
         // int[] sayılar = { 3, 5, 2, 8, 4, 15, 20, 11, 12, 9 };
 
         // for (int i = 1; i < sayılar.Length - 1; i++)
@@ -18,7 +20,7 @@ class Program
         #endregion
 
         #region Soru2
-
+        // Klavyeden girilen 10 sayıyı bir diziye atayın. Bu sayılardan çift olanları `for` döngüsü kullanarak ayrı bir diziye aktarın.Ardından bu çift sayı dizisini küçükten büyüğe sıralayın.
         // int[] dizi = new int[10];
         // int[] ciftDizi = new int[10];
         // int sayaç = 0;
@@ -49,8 +51,8 @@ class Program
         //     }
 
         // }
-
-        // Array.Sort(ciftDizi);
+        // Array.Resize(ref ciftDizi,sayaç);
+        // Array.Sort(ciftDizi,0,sayaç);
         // System.Console.WriteLine("Çiftve küçükten büyüğe sıralı dizilerim ");
         // foreach (var item in ciftDizi)
         // {
@@ -63,59 +65,59 @@ class Program
 
         // 10 elemanlı rastgele değerlerden oluşan bir dizideki tüm pozitif sayıları ve negatif sayıları ayrı dizilere ayıran ve her iki diziyi de ekrana yazdıran bir program yazın.İşlemi gerçekleştirmek için `while` döngüsü kullanın.
 
-        // int[] dizi = new int[10];
-        // int[] pozDizi = new int[10];
-        // int[] negdİZİ = new int[10];
-        // int sayaç = 0;
-        // int sıra =1;
-        // int sayaç1=1;
+        int[] dizi = new int[10];
+        int[] pozDizi = new int[10];
+        int[] negdİZİ = new int[10];
+        int sayaç = 0;
+        int sıra = 1;
+        int sayaç1 = 1;
 
-        // Random rnd = new Random();
+        Random rnd = new Random();
 
-        // for (int i = 0; i < dizi.Length; i++)
-        // {
-        //     dizi[i] = rnd.Next(-10, 11);
-        // }
+        for (int i = 0; i < dizi.Length; i++)
+        {
+            dizi[i] = rnd.Next(-10, 11);
+        }
 
-        // foreach (var eleman in dizi)
-        // {
-        //     // for (int i = 1; i <= dizi.Length ; i++)
-        //     // {
-        //     //      sıra = i;
-        //     // }
-        //     System.Console.WriteLine($"{sayaç1}. {eleman}");
-        //     sayaç1++;
+        foreach (var eleman in dizi)
+        {
+            // for (int i = 1; i <= dizi.Length ; i++)
+            // {
+            //      sıra = i;
+            // }
+            System.Console.WriteLine($"{sayaç1}. {eleman}");
+            sayaç1++;
 
-        // }
+        }
 
-        // for (int i = 0; i < 10; i++)
-        // {
-        //     if (dizi[i] > 0)
-        //     {
-        //         pozDizi[sayaç] = dizi[i];
-        //         sayaç++;
-        //     }
+        for (int i = 0; i < 10; i++)
+        {
+            if (dizi[i] > 0)
+            {
+                pozDizi[sayaç] = dizi[i];
+                sayaç++;
+            }
 
-        //     if (dizi[i] < 0)
-        //     {
-        //         negdİZİ[sayaç] = dizi[i];
-        //         sayaç++;
-        //     }
+            if (dizi[i] < 0)
+            {
+                negdİZİ[sayaç] = dizi[i];
+                sayaç++;
+            }
 
 
-        // }
-        // System.Console.WriteLine("Negatif dizim");
-        // System.Console.WriteLine("---------------------------------");
-        // foreach (var item in negdİZİ)
-        // {
-        //     System.Console.WriteLine(item);
-        // }
-        // System.Console.WriteLine("pozitif dizim");
-        // System.Console.WriteLine("---------------------------------");
-        // foreach (var item in pozDizi)
-        // {
-        //     System.Console.WriteLine(item);
-        // }
+        }
+        System.Console.WriteLine("Negatif dizim");
+        System.Console.WriteLine("---------------------------------");
+        foreach (var item in negdİZİ)
+        {
+            System.Console.WriteLine(item);
+        }
+        System.Console.WriteLine("pozitif dizim");
+        System.Console.WriteLine("---------------------------------");
+        foreach (var item in pozDizi)
+        {
+            System.Console.WriteLine(item);
+        }
 
 
         #endregion
@@ -249,77 +251,195 @@ class Program
         //Klavyeden girilen bir sayıyı, 10 elemanlı rastgele değerlerden oluşan bir tam sayı dizisinde aratın.Eğer sayı dizide yoksa, diziyi sıralayın ve sayıyı dizinin doğru(olması gereken sıra) yerine ekleyin. Ekledikten sonra yeni diziyi ekrana yazdırın.
 
 
-        // int[] dizi2= new int[10];
-        // int[] dizi = new int[10];
-        // int sayaç=0;
+        System.Console.WriteLine("Bir sayı giriniz: ");
+        int sayi = int.Parse(Console.ReadLine());
 
-        // Random rnd = new Random();
+        Random rnd = new Random();
+        int[] numbers = new int[10];
 
-        // for (int i = 0; i < dizi.Length; i++)
-        // {   
-        //     dizi[i] =rnd.Next(1,11);
-        // }
-        // System.Console.WriteLine("RANDOM OLUŞAN DİZİM");
-        // System.Console.WriteLine("----------------------");
-        // foreach (var item in dizi)
-        // {
-        //     System.Console.WriteLine(item);
-        // }
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = rnd.Next(1, 15);
+            System.Console.Write(numbers[i] + " ");
+        }
 
-        // System.Console.Write("Bir sayı giriniz = ");
-        // int input = int.Parse(Console.ReadLine());
+        System.Console.WriteLine();
 
-        // bool varmi =Array.Exists(dizi,elemen)
+        if (!numbers.Contains(sayi))
+        {
+            Array.Sort(numbers);
 
-        #endregion
+            foreach (var number in numbers)
+            {
+                System.Console.Write(number + " ");
+
+            }
+            System.Console.WriteLine();
+
+
+            int[] newNumbers = new int[numbers.Length + 1];
+            Array.Copy(numbers, newNumbers, numbers.Length);
+            newNumbers[newNumbers.Length - 1] = sayi;
+
+            Array.Sort(newNumbers);
+
+
+            foreach (var item in newNumbers)
+            {
+                System.Console.Write(item + " ");
+            }
+
+        }
+
+
+            #endregion
 
         #region Soru9
+            //Verilen bir dizinin yalnızca pozitif sayılarını ters çeviren bir algoritma yazın.Diziyi tararken, sadece pozitif sayıların yerini değiştirmelisiniz, diğer elemanlar aynı kalmalı.
 
-        // int[] dizi={-6,5,6,-9,-8,2,6,7,1,-50};
+            // int[] dizi={-6,5,6,-9,-8,2,6,7,1,-50};
 
-        // for (int i = 0; i < dizi.Length; i++)
-        // {
-        //     if (dizi[i]>0)
-        //     {
-        //         dizi[i]=-dizi[i];
-        //     }
-        // }
+            // for (int i = 0; i < dizi.Length; i++)
+            // {
+            //     if (dizi[i]>0)
+            //     {
+            //         dizi[i]=-dizi[i];
+            //     }
+            // }
 
-        // Array.Sort(dizi);
-        // Array.Reverse(dizi);
-        // foreach (var item in dizi)
-        // {
-        //     System.Console.WriteLine(item);
-        // }
-        #endregion
+            // //Array.Sort(dizi);
+            // // Array.Reverse(dizi);
+            // foreach (var item in dizi)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            #endregion
 
         #region Soru10
-        // Random rnd=new Random();
-        // int[] dizi =new int[5];
-        // int[] dizi2 = new int[5];
-        // int sayaç=0;
-        // for (int i = 0; i < 5; i++)
-        // {
-        //     dizi[i]=rnd.Next(1,79);
+            // 10 elemanlı bir dizi oluşturun ve bu dizinin elemanlarını bir başka diziye ters sırada kopyalayın. İlk dizideki sıralama değişmeyecek, sadece ikinci dizideki sıralama ters olacak.
+            // Random rnd=new Random();
+            // int[] dizi =new int[5];
+            // int[] dizi2 = new int[5];
+            // int sayaç=0;
+            // for (int i = 0; i < 5; i++)
+            // {
+            //     dizi[i]=rnd.Next(1,79);
 
 
-        // }
+            // }
 
-        // foreach (var item in dizi)
-        // {
-        //     System.Console.WriteLine(item);
-        // }
-        // System.Console.WriteLine("--------------------------");
-        // Array.Reverse(dizi);
-        // foreach (var item in dizi)
-        // {
-        //     System.Console.WriteLine(item);
-        // }
+            // foreach (var item in dizi)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+            // System.Console.WriteLine("--------------------------");
+            // Array.Reverse(dizi);
+            // Array.Copy(dizi,dizi2,dizi.Length);
 
-        #endregion
+            // foreach (var item in dizi2)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            #endregion
 
         #region soru11
+            // Klavyeden girilen bir cümlenin kelimelerini bir diziye aktarın. `while` döngüsü ile bu kelimeleri tersten ekrana yazdırın.
 
-        #endregion
+            //    System.Console.Write("Bir kelime giriniz => ");
+            //    string girKelime = Console.ReadLine();
+
+            //    char[] kelDizi = girKelime.ToCharArray();
+            //         Array.Reverse(kelDizi);
+            //      string çevDiz = new string(kelDizi);
+
+            //      foreach (var item in çevDiz)
+            //      {
+            //         System.Console.Write(item);
+            //      }
+
+
+            #endregion
+
+        #region Soru12
+            // 100 elemanlı rastgele değerlerden oluşan bir tam sayı dizisinde en sık tekrar eden elemanı bulan ve kaç defa tekrarlandığını ekrana yazdıran bir program yazın.Bu işlemi bir `foreach` döngüsü ile gerçekleştirin.
+
+            // int[] dizi = new int[20];
+            // Random rnd = new Random();
+            // int sayaç = 1;
+
+            // for (int i = 0; i < dizi.Length; i++)
+            // {
+            //     dizi[i] = rnd.Next(1, 11);
+
+            // }
+            // System.Console.WriteLine("Random dizimiz");
+            // System.Console.WriteLine("---------------------------------------------------");
+            // foreach (var item in dizi)
+            // {
+            //     System.Console.WriteLine($"{sayaç}. ==> {item}");
+            //     sayaç++;
+            // }
+
+            // int fazlaTekEleman = dizi[0];
+            // int tekrareleman = 0;
+
+            // for (int i = 0; i < dizi.Length; i++)
+            // {
+            //     int x = dizi[i];
+            //     int teksay = 0;
+
+            //     foreach (var eleman in dizi)
+            //     {
+            //         if (eleman == x)
+            //         {
+            //             teksay++;
+            //         }
+            //     }
+
+            //     if (teksay > tekrareleman)
+            //     {
+            //         fazlaTekEleman = x;
+            //         tekrareleman = teksay;
+            //     }
+            // }
+
+            // System.Console.WriteLine($"En çok tekrar eden eleman {fazlaTekEleman} = {tekrareleman} kadar tekrarlanıyor.");
+            #endregion
+
+        #region Soru13
+            // Bir dizideki tek sayıları toplayan ve bu toplamın çift mi, tek mi olduğunu kontrol eden bir program yazın.Toplamla birlikte eğer toplam tek ise, "Toplam tek sayı" mesajı, çift ise "Toplam çift sayı" mesajı ekrana yazdırılmalı.
+
+            // int[] dizi = {2,4,5,7};
+            // int çiftop=0;
+            // int tektop=0;
+
+            // System.Console.WriteLine("Dizimizdeki sayılar  ");
+            // foreach (var item in dizi)
+            // {
+            //     System.Console.WriteLine(item);
+            // }
+
+            //  for (int i = 0; i < dizi.Length; i++)
+            //  {
+            //     if(dizi[i] % 2 == 0)
+            //     {
+            //         çiftop+=dizi[i];
+
+            //     }else
+            //     {
+            //         tektop+=dizi[i];
+            //     }
+            //  }
+
+            //  System.Console.WriteLine($"Dizideki tek sayıların toplamı = {tektop} /// Dizideki çift sayıların toplamı = {çiftop} ");
+
+            #endregion
+
+        #region Soru14
+
+
+            #endregion
+        }
     }
-}
