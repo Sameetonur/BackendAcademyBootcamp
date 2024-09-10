@@ -248,42 +248,78 @@ class Program
         #region Soru8
         //Klavyeden girilen bir sayıyı, 10 elemanlı rastgele değerlerden oluşan bir tam sayı dizisinde aratın.Eğer sayı dizide yoksa, diziyi sıralayın ve sayıyı dizinin doğru(olması gereken sıra) yerine ekleyin. Ekledikten sonra yeni diziyi ekrana yazdırın.
 
-        System.Console.Write("Bir sayı giriniz = ");
-        int input = int.Parse(Console.ReadLine());
-        int[] dizi2= new int[10];
-        int[] dizi = new int[10];
-        int sayaç=0;
-        
-        Random rnd = new Random();
 
-        for (int i = 0; i < dizi.Length; i++)
-        {   
-            dizi[i] =rnd.Next(1,11);
-        }
-        System.Console.WriteLine("RANDOM OLUŞAN DİZİM");
-        System.Console.WriteLine("----------------------");
-        foreach (var item in dizi)
-        {
-            System.Console.WriteLine(item);
-        }
-            for (int i = 0; i < dizi.Length; i++)
-            {
-                if(dizi[i] != input)
-                {
-                    System.Console.WriteLine($"girilen {input} sayısı dizide var. ");
-                    
-                }
-            }
+        // int[] dizi2= new int[10];
+        // int[] dizi = new int[10];
+        // int sayaç=0;
 
-        System.Console.WriteLine("RANDOM DİZİMİN BKÜÇÜKTEN BÜYÜĞE SIRALANMIŞ HALİ");
-        System.Console.WriteLine("----------------------");
-        Array.Sort(dizi);
-        foreach (var item in dizi)
-        {
-            System.Console.WriteLine(item);
-        }
-        
-    
+        // Random rnd = new Random();
+
+        // for (int i = 0; i < dizi.Length; i++)
+        // {   
+        //     dizi[i] =rnd.Next(1,11);
+        // }
+        // System.Console.WriteLine("RANDOM OLUŞAN DİZİM");
+        // System.Console.WriteLine("----------------------");
+        // foreach (var item in dizi)
+        // {
+        //     System.Console.WriteLine(item);
+        // }
+
+        // System.Console.Write("Bir sayı giriniz = ");
+        // int input = int.Parse(Console.ReadLine());
+
+        // bool varmi =Array.Exists(dizi,elemen)
+
+        #endregion
+
+        #region Soru9
+
+        // int[] dizi={-6,5,6,-9,-8,2,6,7,1,-50};
+
+        // for (int i = 0; i < dizi.Length; i++)
+        // {
+        //     if (dizi[i]>0)
+        //     {
+        //         dizi[i]=-dizi[i];
+        //     }
+        // }
+
+        // Array.Sort(dizi);
+        // Array.Reverse(dizi);
+        // foreach (var item in dizi)
+        // {
+        //     System.Console.WriteLine(item);
+        // }
+        #endregion
+
+        #region Soru10
+        // Random rnd=new Random();
+        // int[] dizi =new int[5];
+        // int[] dizi2 = new int[5];
+        // int sayaç=0;
+        // for (int i = 0; i < 5; i++)
+        // {
+        //     dizi[i]=rnd.Next(1,79);
+
+
+        // }
+
+        // foreach (var item in dizi)
+        // {
+        //     System.Console.WriteLine(item);
+        // }
+        // System.Console.WriteLine("--------------------------");
+        // Array.Reverse(dizi);
+        // foreach (var item in dizi)
+        // {
+        //     System.Console.WriteLine(item);
+        // }
+
+        #endregion
+
+        #region soru11
+
         #endregion
     }
 }
