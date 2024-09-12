@@ -617,45 +617,45 @@ class Program
         #region Soru17
         // Bir dizideki en büyük iki sayıyı bulan bir program yazın. Bu programı bir `for` döngüsü ile yazın, ancak aynı sayının iki defa en büyük olarak seçilmesine izin vermeyin.
 
-        int[] dizi = new int[20];
-        Random rnd = new Random();
+        // int[] dizi = new int[20];
+        // Random rnd = new Random();
 
-        for (int i = 0; i < dizi.Length; i++)
-        {
-            dizi[i] = rnd.Next(1, 20);
-        }
+        // for (int i = 0; i < dizi.Length; i++)
+        // {
+        //     dizi[i] = rnd.Next(1, 20);
+        // }
 
-        int enBüyük = int.MinValue;
-        int ikiBüyük = int.MinValue;
-
-
-        foreach (var item in dizi)
-        {
-            System.Console.WriteLine(item);
-        }
+        // int enBüyük = int.MinValue;
+        // int ikiBüyük = int.MinValue;
 
 
-        for (int i = 0; i < dizi.Length; i++)
-        {
-            if (dizi[i] > enBüyük)
-            {
-                ikiBüyük = enBüyük;
-                enBüyük = dizi[i];
-            }
-            else if (dizi[i] > ikiBüyük && dizi[i] != enBüyük)
-            {
-                ikiBüyük = dizi[i];
-            }
-        }
+        // foreach (var item in dizi)
+        // {
+        //     System.Console.WriteLine(item);
+        // }
 
-        if (ikiBüyük == int.MinValue)
-        {
-            System.Console.WriteLine("Dizide sadece bir farklı sayı var.");
-        }
-        else
-        {
-            System.Console.WriteLine($"Dizinin en büyük sayısı => {enBüyük} ve bir sonraki en büyük sayı => {ikiBüyük}");
-        }
+
+        // for (int i = 0; i < dizi.Length; i++)
+        // {
+        //     if (dizi[i] > enBüyük)
+        //     {
+        //         ikiBüyük = enBüyük;
+        //         enBüyük = dizi[i];S
+        //     }
+        //     else if (dizi[i] > ikiBüyük && dizi[i] != enBüyük)
+        //     {
+        //         ikiBüyük = dizi[i];
+        //     }
+        // }
+
+        // if (ikiBüyük == int.MinValue)
+        // {
+        //     System.Console.WriteLine("Dizide sadece bir farklı sayı var.");
+        // }
+        // else
+        // {
+        //     System.Console.WriteLine($"Dizinin en büyük sayısı => {enBüyük} ve bir sonraki en büyük sayı => {ikiBüyük}");
+        // }
 
         #endregion
     }
