@@ -13,9 +13,10 @@ public class Animal
     public string Name { get; set; }
     public int Age { get; set; }
 
-    public void MakeSound()
+    public virtual void MakeSound() //virtual bu class hangi başka classa miras veriliyorsa geçersiz sayılıp yerine girilebilir polimorfizim
     {
         System.Console.WriteLine($"{Name} Ses çıkardı!!");
     }
 
+    
 }
