@@ -2,6 +2,7 @@
 using System.Security.Principal;
 using HomeWork16092024.Animal;
 using HomeWork16092024.HesapMankinesi;
+using HomeWork16092024.MağzaÜrünYönetim;
 using HomeWork16092024.TaşıtYönetimSistemi;
 
 namespace HomeWork16092024;
@@ -18,5 +19,23 @@ class Program
         //soru6***
         // ScientificCalculator sayı1 = new ScientificCalculator();
         // System.Console.WriteLine(sayı1.Divide(20,2));
+
+        // ElectronicProduct ec1 = new ElectronicProduct("Klavye", 1500, 500, 2);
+        // System.Console.WriteLine("1.HALİ");
+        // ec1.BiLgilendirme();
+        // System.Console.WriteLine("2.---");
+        // ec1.UpdateAddStock(100);
+        // System.Console.WriteLine(ec1.ChechStock());
+        // ec1.BiLgilendirme();
+        // System.Console.WriteLine("3.hali---");
+        // ec1.UpdateDeleteStock(200);
+        // System.Console.WriteLine(ec1.ChechStock());
+        // ec1.BiLgilendirme();
+
+
+
+
+
+
     }
 }
