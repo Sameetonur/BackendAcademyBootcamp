@@ -1,6 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System.Security.Principal;
 using HomeWork16092024.Animal;
+using HomeWork16092024.EğitimKurumu;
 using HomeWork16092024.HesapMankinesi;
 using HomeWork16092024.MağzaÜrünYönetim;
 using HomeWork16092024.TaşıtYönetimSistemi;
@@ -31,6 +32,12 @@ class Program
         // ec1.UpdateDeleteStock(200);
         // System.Console.WriteLine(ec1.ChechStock());
         // ec1.BiLgilendirme();
+
+        Student st1 = new Student("Nurdan", 12, 7);
+        st1.AttendClass();
+        System.Console.WriteLine("----------");
+        Teacher tec1 = new Teacher("Murat", 35, "Üçgenler");
+        tec1.AttendClass();
 
 
 
