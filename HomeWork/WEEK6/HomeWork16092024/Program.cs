@@ -16,7 +16,7 @@ class Program
         // Bicycle bicycle1 = new Bicycle("Yılmaz","Çocuk",2024,"VAR");
         // bicycle1.Bilgilendirme();
         //soru6***
-        //     ScientificCalculator sayı1 = new ScientificCalculator();
-        //   System.Console.WriteLine(sayı1.Divide(20,2));
+        // ScientificCalculator sayı1 = new ScientificCalculator();
+        // System.Console.WriteLine(sayı1.Divide(20,2));
     }
 }
