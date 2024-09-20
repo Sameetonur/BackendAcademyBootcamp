@@ -9,6 +9,8 @@ public class Library : Book
 
     }
 
+    public Book[] Books { get; set; }=[];
+
     public override void Borrow()
     {
         base.Borrow();

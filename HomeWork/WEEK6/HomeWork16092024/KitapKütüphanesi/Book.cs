@@ -19,11 +19,11 @@ public class Book
 
     public virtual void Borrow()
     {
-        System.Console.WriteLine("Ödünç Al.");
+        System.Console.WriteLine($"{Title} Ödünç Alındı.");
     }
     public virtual void Return()
     {
-        System.Console.WriteLine("İade Et.");
+        System.Console.WriteLine($"{Title} Kitabı İade Edildi.");
     }
 
 
