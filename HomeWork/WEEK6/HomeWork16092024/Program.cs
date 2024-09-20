@@ -4,6 +4,7 @@ using HomeWork16092024.Animal;
 using HomeWork16092024.EğitimKurumu;
 using HomeWork16092024.HesapMankinesi;
 using HomeWork16092024.MağzaÜrünYönetim;
+using HomeWork16092024.OyunKarakterleri;
 using HomeWork16092024.TaşıtYönetimSistemi;
 
 namespace HomeWork16092024;
@@ -38,6 +39,12 @@ class Program
         // System.Console.WriteLine("----------");
         // Teacher tec1 = new Teacher("Murat", 35, "Üçgenler");
         // tec1.AttendClass();
+
+        // Mage maage1 = new Mage("ArthurGonzalez"
+        // , 50);
+
+        // System.Console.WriteLine(maage1.Name);
+        // maage1.ToprakKaldırma();
 
 
 
