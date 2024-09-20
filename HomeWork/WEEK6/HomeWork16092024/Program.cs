@@ -33,11 +33,20 @@ class Program
         // System.Console.WriteLine(ec1.ChechStock());
         // ec1.BiLgilendirme();
 
-        Student st1 = new Student("Nurdan", 12, 7);
-        st1.AttendClass();
-        System.Console.WriteLine("----------");
-        Teacher tec1 = new Teacher("Murat", 35, "Üçgenler");
-        tec1.AttendClass();
+        // Student st1 = new Student("Nurdan", 12, 7);
+        // st1.AttendClass();
+        // System.Console.WriteLine("----------");
+        // Teacher tec1 = new Teacher("Murat", 35, "Üçgenler");
+        // tec1.AttendClass();
+
+
+
+
+
+
+
+
+
 
 
 
