@@ -199,19 +199,129 @@ class Program
         //         System.Console.WriteLine("5 DOĞRU YAPRINIZ KAZANDINIZ!!");
         //     }
         #endregion
+
+        #region Soru6
+
+        // int enBüyük = int.MinValue;
+        // int enKüçük = int.MaxValue;
+        // int sayaç = 1;
+        // int[] dizi = new int[10];
+        // Random rnd = new Random();
+
+        // for (int i = 0; i < dizi.Length; i++)
+        // {
+        //     dizi[i] = rnd.Next(1, 51);
+        // }
+        // System.Console.WriteLine("-----Dizimin ilk elemanları-----");
+        // foreach (var item in dizi)
+        // {
+        //     System.Console.WriteLine($"{sayaç++}.Sayı => {item}");
+        // }
+
+        // for (int i = 0; i < dizi.Length; i++)
+        // {
+        //     if (dizi[i] > enBüyük)
+        //     {
+        //         enBüyük = dizi[i];
+
+        //     }
+
+        //     if (dizi[i] < enKüçük)
+        //     {
+        //         enKüçük = dizi[i];
+        //     }
+
+        // }
+        // System.Console.WriteLine($"Dizideki En Büyük Sayı => {enBüyük}");
+        // System.Console.WriteLine($"Dizideki En Büyük Sayı => {enKüçük}");
+
+
+
+
+
+        #endregion
+
+        #region Soru7
+
+        int[] lotoDizi = new int[6];
+
+        Random rnd = new Random();
+
+        for (int i = 0; i < lotoDizi.Length; i++)
+        {
+            lotoDizi[i] = rnd.Next(1, 11);
+        }
+        int sayaç = 1;
+        System.Console.WriteLine("6'lı Loto Sayılarım");
+        foreach (var item in lotoDizi)
+        {
+            System.Console.WriteLine($"{sayaç++}.Sayı => {item}");
+        }
+        int sayaç1 = 0;
+
+        int input;
+        int[] inputSayıDiz = new int[6];
+        System.Console.WriteLine("6 adet 1-10 arasında sayı giriniz!");
+
+
+
+        for (int i = 0; i < 6; i++)
+        {
+            System.Console.WriteLine($"{i + 1}.sayıyı giriniz (1-10) arasında olmalıdır!");
+            input = int.Parse(Console.ReadLine());
+            inputSayıDiz[i] = input;
+        }
+        System.Console.WriteLine("Kullanıcının Girdiği dizi");
+        foreach (var item in inputSayıDiz)
+        {
+            System.Console.Write(" " + item);
+        }
+
+        for (int i = 0; i < lotoDizi.Length; i++)
+        {
+            foreach (var item in inputSayıDiz)
+            {
+                if (lotoDizi[i] == item)
+                {
+                    sayaç1++;
+                    break;
+                }
+            }
+        }
+        System.Console.WriteLine();
+        System.Console.WriteLine($"Lotoda doğru bildiğiniz sayı adeti => {sayaç1}");
+        System.Console.WriteLine("Loto Sayılarımız ");
+        foreach (var item in lotoDizi)
+        {
+            System.Console.Write(" " + item);
+        }
+
+
+
+
+
+
+        #endregion
     }
     #region Sorular
-    //         Soru1
-    //         //Kullanıcıya basit matematik işlemleri (toplama, çıkarma) sorarak cevaplarını kontrol edin. 
-    //         soru2
-    //         // bir kelime dizisindeki 8 tane hayvanı kullanıcıya buldurmaya çalışınız kullanıcı her yanlış tahmininde  random olarak seçilen dizideki hayvanın harf harf infosunu veriniz mesela( seçilen hayvanın 1. harfi m (seçilen hayfan maymun olarak varsaydım))
-    //         Soru3
-    //          // kullanıcıdan istenen 10 adet sayı dizesinin içerisindeki tek ve çift sayıların adetini yazdıran algoritma
-    //          soru4
-    //          // sayı bulma oyunu yapın mesela 1-100 sayıları arasında random bir sayı üretilsin girilen 1-100 arasındaki sayıya göre info verilsin daha büyük daha küçük gibi bilince kazandınız diyip bana kazandınız random sayı neyse onu yazsın!.
-    //          Soru5
-    //          //diziyi ters çevirme işlemi
+    //Soru1
+    ////Kullanıcıya basit matematik işlemleri (toplama, çıkarma) sorarak cevaplarını kontrol edin. 
+    //soru2
+    //// bir kelime dizisindeki 8 tane hayvanı kullanıcıya buldurmaya çalışınız kullanıcı her yanlış tahmininde  random olarak seçilen dizideki hayvanın harf harf infosunu veriniz mesela( seçilen hayvanın 1. harfi m (seçilen hayfan maymun olarak varsaydım))
+    //Soru3
+    //// kullanıcıdan istenen 10 adet sayı dizesinin içerisindeki tek ve çift sayıların adetini yazdıran algoritma
+    //soru4
+    //// sayı bulma oyunu yapın mesela 1-100 sayıları arasında random bir sayı üretilsin girilen 1-100 arasındaki sayıya göre info verilsin daha büyük daha küçük gibi bilince kazandınız diyip bana kazandınız random sayı neyse onu yazsın!.
+    //Soru5
+    ////diziyi ters çevirme işlemi
     // }
+    //soru6
+    //Dizi İçerisindeki En Büyük ve En Küçük Sayıyı Bulma
+    //soru7
+    //     Sayısal Loto Simülasyonu
+    // Bir sayısal loto oyunu simüle edin. 1 ile 49 arasında 6 farklı sayı rastgele seçilsin.
+    // Kullanıcıdan 6 sayı alarak bu sayıları karşılaştırın ve kaç tanesini doğru bildiğini ekrana yazdırın.
+
 
     #endregion
 
