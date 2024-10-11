@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Tekrar01;
 
@@ -243,58 +244,59 @@ class Program
 
         #region Soru7
 
-        int[] lotoDizi = new int[6];
+        // int[] lotoDizi = new int[6];
 
-        Random rnd = new Random();
+        // Random rnd = new Random();
 
-        for (int i = 0; i < lotoDizi.Length; i++)
-        {
-            lotoDizi[i] = rnd.Next(1, 11);
-        }
-        int sayaç = 1;
-        System.Console.WriteLine("6'lı Loto Sayılarım");
-        foreach (var item in lotoDizi)
-        {
-            System.Console.WriteLine($"{sayaç++}.Sayı => {item}");
-        }
-        int sayaç1 = 0;
+        // for (int i = 0; i < lotoDizi.Length; i++)
+        // {
+        //     lotoDizi[i] = rnd.Next(1, 11);
+        // }
+        // int sayaç = 1;
+        // System.Console.WriteLine("6'lı Loto Sayılarım");
+        // foreach (var item in lotoDizi)
+        // {
+        //     System.Console.WriteLine($"{sayaç++}.Sayı => {item}");
+        // }
+        // int sayaç1 = 0;
 
-        int input;
-        int[] inputSayıDiz = new int[6];
-        System.Console.WriteLine("6 adet 1-10 arasında sayı giriniz!");
+        // int input;
+        // int[] inputSayıDiz = new int[6];
+        // System.Console.WriteLine("6 adet 1-10 arasında sayı giriniz!");
 
 
 
-        for (int i = 0; i < 6; i++)
-        {
-            System.Console.WriteLine($"{i + 1}.sayıyı giriniz (1-10) arasında olmalıdır!");
-            input = int.Parse(Console.ReadLine());
-            inputSayıDiz[i] = input;
-        }
-        System.Console.WriteLine("Kullanıcının Girdiği dizi");
-        foreach (var item in inputSayıDiz)
-        {
-            System.Console.Write(" " + item);
-        }
+        // for (int i = 0; i < 6; i++)
+        // {
+        //     System.Console.WriteLine($"{i + 1}.sayıyı giriniz (1-10) arasında olmalıdır!");
+        //     input = int.Parse(Console.ReadLine());
+        //     inputSayıDiz[i] = input;
+        // }
+        // System.Console.WriteLine("Kullanıcının Girdiği dizi");
+        // foreach (var item in inputSayıDiz)
+        // {
+        //     System.Console.Write(" " + item);
+        // }
 
-        for (int i = 0; i < lotoDizi.Length; i++)
-        {
-            foreach (var item in inputSayıDiz)
-            {
-                if (lotoDizi[i] == item)
-                {
-                    sayaç1++;
-                    break;
-                }
-            }
-        }
-        System.Console.WriteLine();
-        System.Console.WriteLine($"Lotoda doğru bildiğiniz sayı adeti => {sayaç1}");
-        System.Console.WriteLine("Loto Sayılarımız ");
-        foreach (var item in lotoDizi)
-        {
-            System.Console.Write(" " + item);
-        }
+        // for (int i = 0; i < lotoDizi.Length; i++)
+        // {
+        //     foreach (var item in inputSayıDiz)
+        //     {
+        //         if (lotoDizi[i] == item)
+        //         {
+        //             sayaç1++;
+        //             break;
+        //         }
+        //     }
+        // }
+        // System.Console.WriteLine();
+        // System.Console.WriteLine($"Lotoda doğru bildiğiniz sayı adeti => {sayaç1}");
+        // System.Console.WriteLine("Loto Sayılarımız ");
+        // foreach (var item in lotoDizi)
+        // {
+        //     System.Console.Write(" " + item);
+        // }
+
 
 
 
@@ -302,7 +304,38 @@ class Program
 
 
         #endregion
+        #region Soru8
+
+        int[] numbers = { 5, 4, 7, 6, 9, 8, 10, 5, 1 };
+        int[] tutucu = new int[numbers.Length];
+        int sayac = 0;
+
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            for (int j = i + 1; j < numbers.Length; j++)
+            {
+                if (numbers[i] < numbers[j])
+                {
+                    int büyükSay = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = büyükSay;
+                }
+            }
+        }
+        foreach (var item in numbers)
+        {
+            tutucu[sayac] = item;
+            sayac++;
+        }
+        foreach (var item in tutucu)
+        {
+            Console.WriteLine(item);
+        }
+        #endregion
     }
+
+
     #region Sorular
     //Soru1
     ////Kullanıcıya basit matematik işlemleri (toplama, çıkarma) sorarak cevaplarını kontrol edin. 
