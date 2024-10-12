@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.String</title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        
+        // let text = 'AcunMedya  Akademi';
+        // let text2 = "Merhaba Dünya";
+        // let text3 = `Backtick`;
+        // let text4 = 'Pucca';
+        // let text5 = 'Kitabının adı :"Hayriyenin Düğümleri" ';
+        // let text6 = text + " " + text2;
+        // let text7 = `
+        //         ${text} ${text2}
+            
+        //     `;
+
+        // console.log(text.length);
+        // console.log(text.charAt(11));
+        // console.log(text.toUpperCase());
+        // console.log(text.toLowerCase());
+        // console.log(text.slice(4, 9));
+        // console.log(text.replace(' ', '/'));
+        // console.log(text.replace('a', 'x'));
+         //let title = '10.Dönem Backend Temel Eğitimi';
+        // console.log(title);
+        // console.log(title.split(' '));
+
+        //title içindeki metnin boşlukların tamamını - ile değiştirin
+        let title = 'Backend Temel Eğitimi';
+    
+        let titleSplit=title.toLowerCase().split(' ');
+        for (let i = 0; i < titleSplit.length; i++)
+        {
+            if(i!=titleSplit.length-1)
+        {
+            title += titleSplit[i] + '-';
+        }else
+        {
+            title += titleSplit[i];
+        }
+           
+            
+        }
+
+        let newTitle=titleSplit.join('-');
+            //console.log(titleSplit);
+            
+            console.log(title);
+            console.log(newTitle);
+
+        //10.dönem-backend-temel-eğitimi
+
+    </script>
+</body>
+
+</html>

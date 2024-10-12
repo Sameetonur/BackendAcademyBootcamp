@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seçiciler</title>
+</head>
+
+<body>
+    <p id="hello">Merhaba</p>
+
+    <div>
+        1.Div İçeriği
+    </div>
+
+    <div>
+        2.Dic İçeriği
+
+    </div>
+
+    <div id="bosDiv" style="border: 1px solid red;">
+
+    </div>
+    <br>
+    <br>
+    <h2 class="Baslık1 metin1">Elementleri class'larına göre seçme</h2>
+
+    <p id="metin1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, eius voluptatum vel tempore expedita
+        maxime. Eos et iure harum necessitatibus qui dignissimos, ipsum alias accusamus veniam ad similique voluptate
+        autem non, eaque aliquam esse libero ipsa ratione! Obcaecati sint nulla harum autem, explicabo facilis iure
+        aperiam quibusdam, ratione nihil distinctio?</p>
+
+    <div id="metin2" class="metin1" style="background-color: aqua;">
+        <a href="link" href="#">Link1</a>
+        <ul id="first-menu">
+            <li>Anasayfa</li>
+            <li>Hakkında</li>
+            <li>İletişim</li>
+        </ul>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-item">Home</li>
+                <li class="menu-item">About</li>
+                <li class="menu-item">Content</li>
+            </ul>
+        </div>
+    </div>
+
+    <a id="metin1" href="#">Link4</a>
+
+
+    <script>
+        // const helloElement = document.getElementById('hello');
+        // //console.log(helloElement);
+        // hello.style.backgroundColor = 'aqua';
+        // hello.style.padding = '20px';
+        // hello.style.color = 'red';
+        // hello.innerText = 'Merhaba, JavaScript';
+        // hello.innerHTML = '<h1 style="color:blue;">Selam</h1>';
+
+        // const allDivs = document.getElementsByTagName('div');
+        // console.log(allDivs);
+
+        // const allH2s = document.getElementsByTagName('h2');
+        // console.log(allH2s);
+
+
+        // const bosDivElement = document.getElementById('bosDiv');
+        // bosDiv.innerHTML = `
+        //     <a href="https://www.google.com"> Google </a>
+
+        // `;
+
+        // const allbaslık1 = document.getElementsByClassName('baslık1');
+        // console.log(allbaslık1);
+
+        // const allmetin1 = document.getElementsByClassName('metin1');
+        // console.log(allmetin);
+
+
+
+        // CSS Sorgularına göre element seçmek
+        const allA = document.getElementsByTagName('a');
+        console.log(allA);
+
+        const allA2 = document.querySelectorAll('a'); // elemente göre
+        console.log(allA2);
+
+        const allMenuItem = document.getElementsByClassName('menu-item');
+        console.log(allMenuItem);
+
+        const allMenuItem2 = document.querySelectorAll('.menu-item');//clasaa göre
+
+        console.log(allMenuItem2);
+
+        const metin1 = document.getElementById('metin1'); // 1 tane gitirebildi 1 tane olmasın rağmen metin1 in
+        console.log(metin1);
+
+        const allMenu = document.querySelectorAll('#first-menu li'); //queryselectall ile js ile css alanı gibi içeriden çağırabiliyoruz.
+        console.log(allMenu);
+
+        console.log(document.querySelector('#first-menu li')); //querySelevtor  1 adet getirir.
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

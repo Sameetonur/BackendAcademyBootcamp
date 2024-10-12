@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olaylar</title>
+</head>
+
+<body>
+    <h1>Events</h1>
+    <div>
+        <Button onclick="changeColor('red','white');">Kırmızı/Beyaz</Button>
+    </div>
+    <div>
+        <button onmouseover="changeColor('black','yellow')">Siyah/Sarı</button>
+    </div>
+    <div>
+        <button onmouseout="changeColor('blue','yellow')">Lacivert/Sarı</button>
+    </div>
+    <div>
+        <button ondblclick="changeColor('purple','white')">Mor/Beyaz</button>
+    </div>
+    <br>
+    <br>
+    <form name="gender" action="">
+        <input type="radio" name="genderRadio" checked> Kadın
+        <input type="radio" name="genderRadio"> Erkek
+        <div>
+            <input type="button" value="Seçim Yap" onclick="showStatus()">
+        </div>
+    </form>
+
+    <form action="">
+        <div>
+            <label for="">Ad:</label>
+            <input type="text" onfocus="this.placeholder='Adınızı giriniz..'" onblur="this.placeholder=''">
+        </div>
+        <div>
+            <label for="">Soyad:</label>
+            <input type="text" onfocus="this.placeholder='Soyadınızı giriniz..'" onblur="this.placeholder=''">
+        </div>
+    </form>
+
+    <form action="">
+        <select onchange="go(this)">
+            <option value="#">Bir arama motoru seçiniz!</option>
+            <option value="https://www.Google.com">Google</option>
+            <option value="https://www.Yandex.com">Yandex</option>
+            <option value="https://www.Bing.com">Bing</option>
+            <option value="https://www.Yahoo.com">Yahoo</option>
+        </select>
+    </form>
+    <div id="content">
+        <h1 id="title-about">About</h1>
+        <p id="about" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            incidunt, at eaque, magnam eos
+            recusandae quaerat iure, quam fugit ipsa nobis necessitatibus. Ullam ipsam voluptatem soluta! Doloribus,
+            quam. Repellendus, ipsam. Fugit consectetur sunt, delectus nostrum culpa ipsa mollitia atque officiis.
+            Quidem obcaecati ut quis ab hic iste consectetur et voluptatibus!</p>
+    </div>
+
+
+
+    <script>
+
+        const about = document.getElementById('about');
+        about.addEventListener('click', function () {
+            //location.href='https://www.acunmedyaakademi.com'
+        });
+
+        document.getElementById('title-about').addEventListener('click', function () {
+            if (about.style.display == 'none') {
+                about.style.display = 'block';
+            } else {
+                about.style.display = 'none';
+            }
+        });
+        console.log(about)
+
+
+
+        function changeColor(gb, fg) {
+            document.bgColor = gb;
+            document.fgColor = fg;
+        }
+
+        function showStatus() {
+            let message = '';
+            if (document.gender.genderRadio[0].checked) {
+                message = 'Cinsiyetimiz: Kadın';
+            } else {
+                message = 'Cinsiyetiniz: Erkek';
+            }
+            alert(`Sonuç=> ${message}`);
+
+
+        }
+
+        function go(element) {
+            const selectedOption = element.selectedIndex;
+            const address = element.options[selectedOption].value;
+            // location.href=address;
+            //window.open(address);
+            if (confirm('Sitemiden ayrılıyorsunuz! Emin misiniz!')) {
+                location.href = address;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

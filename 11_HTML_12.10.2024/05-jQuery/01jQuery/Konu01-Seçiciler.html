@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>jQuery Seçiciler</h1>
+    <p>jQuery hızlı,performanslı ve kısa bir şekilde js kodları yazabilmemizi sağlayan bir kütüphanedir.</p>
+
+    <h2>jQuery nasıl eklenir.</h2>
+    <ol>
+        <li>jQuery dosyasını indirip proje klasörüne koyarak</li>
+        <li>CSN linki kullanarak</li>
+    </ol>
+    <h2 id="title">Id'ye göre seçme</h2>
+    <p id="message" class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum temporibus
+        voluptates repellat labore ab sequi. Deserunt repellat est in harum dolorem tempore minima beatae consequuntur
+        qui fugit non expedita voluptatibus eius tenetur, ipsa, velit sed officiis cum facere omnis! Praesentium neque
+        hic possimus eaque? Iusto sint quas deserunt magnam.</p>
+    <h2 id="title">Deneme</h2>
+    <p id="description" class="message">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam repellat nam
+        consequatur possimus molestiae, odio voluptas voluptates dolor unde asperiores similique exercitationem
+        assumenda eaque delectus aspernatur consequuntur a ipsam. Saepe tempore optio ratione tempora facere iure,
+        repudiandae odit eum exercitationem consequuntur sequi, amet aliquid tenetur temporibus voluptatibus esse,
+        explicabo excepturi doloribus! Nobis quisquam sed quibusdam. Ipsam beatae sequi optio, dignissimos deleniti
+        voluptatem sed. Nemo ipsum molestiae aliquam consequatur libero porro rem ipsa cumque veritatis. Veritatis,
+        ratione. Officia minus quidem doloremque delectus error, fugiat voluptates nesciunt incidunt tempore blanditiis
+        eligendi molestiae rem omnis! Quam, assumenda ab in non incidunt omnis hic.</p>
+
+
+
+    <script src="/01jQuery/jquery.js"></script>
+    <script>
+        // document.getElementById('div').innerText='Yeni Metin';
+        $('div').text('Yeni Metin');
+
+        $('#title').text('jQuery Kullanarak Id seçme');
+        $('#message').text('Yeni Mesaj');
+        $('.message').text('Bunu da class ile seçtik');
+
+        const title = $('title');
+        console.log($('#description'));
+
+        const hobbies = ['Spor', 'Kitap Okumak', 'Müzik','Koşmak'];
+        let htmlContent = '<ul>';
+            hobbies.forEach(hobby => {
+                htmlContent+=`<li>${hobby}</li>`;
+            });
+        htmlContent += '<ul>'
+
+            console.log(htmlContent);
+
+        $('#description').html(htmlContent);
+    </script>
+</body>
+
+</html>

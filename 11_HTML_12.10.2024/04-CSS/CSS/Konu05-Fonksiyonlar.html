@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.Fonksiyonlar</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+    <button onclick="changeMode('black','white')">Dark Mode</button>
+    <button onclick="changeMode('white','black')">Light Mode</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias voluptatum iure temporibus iste reprehenderit pariatur ratione sed doloribus nostrum illo! Totam delectus pariatur quaerat reiciendis ab voluptates, unde nemo! Soluta laborum maiores enim vero obcaecati quam quibusdam expedita reprehenderit quos nisi praesentium cum molestias a quisquam ipsum accusantium esse ipsam ea, nihil at inventore mollitia iusto recusandae. Accusamus eligendi ut ratione at quos facilis nulla fugit voluptate velit odio illo, itaque dolorem porro consequatur autem odit esse vel deleniti voluptatum corrupti rerum? Distinctio optio eveniet aspernatur odit consequuntur, quod nam tempora fugit quibusdam eaque laborum incidunt quaerat possimus a quas repellat laboriosam, voluptatem tenetur. Magni, omnis asperiores dolores non at id deserunt eaque sapiente, doloribus repellat facere repudiandae. Iusto molestias sed aut numquam eaque totam, magnam consequatur voluptatum repellat id sunt voluptate qui? Ad alias, id placeat quae maxime debitis impedit laboriosam, aperiam ullam quidem corrupti incidunt nobis quibusdam, assumenda magni perferendis ut magnam autem! Quo aspernatur quae, ducimus consectetur inventore consequuntur dignissimos, placeat molestiae labore quidem sit veritatis reprehenderit facilis magni magnam aperiam, obcaecati quibusdam expedita excepturi mollitia ullam ab. Eum dignissimos, perferendis necessitatibus molestias voluptas nemo dolor eaque facilis officia. Voluptas explicabo iusto labore, facere excepturi architecto qui? Possimus et pariatur, beatae modi dicta est culpa? Sint, ullam suscipit, consectetur at aliquid temporibus quos vel dignissimos natus molestias, totam iure. Possimus cupiditate nemo modi, doloribus iusto, veniam amet aspernatur voluptas numquam quas ipsum id adipisci voluptatibus commodi ad ipsa, exercitationem magnam beatae repudiandae repellat corporis non? Nesciunt aspernatur magni exercitationem facere veritatis tempora dicta quia accusantium eligendi quo ducimus, illo a est adipisci voluptates expedita commodi. Cum beatae at consequatur hic quia, provident illum. Laborum ratione, velit excepturi saepe amet reprehenderit pariatur ipsum consequatur facilis omnis soluta sunt quis animi architecto officia! Id necessitatibus nobis cumque ipsum, voluptatem esse, sint itaque soluta optio natus dignissimos aut, consequuntur dolores! Soluta nulla sapiente optio? Adipisci amet quo suscipit aspernatur hic quae dolores tempore vel officiis laborum? Repellendus numquam quia mollitia nobis deserunt commodi quidem, soluta dignissimos culpa fugiat, ad officiis nam error facilis illum. Culpa possimus laboriosam dolorum voluptas officiis magni sequi blanditiis rerum sapiente quisquam cum dolores laudantium repudiandae quam enim explicabo laborum qui in, facilis quibusdam eaque voluptatum! Animi quisquam sint velit eius doloremque modi, illo atque culpa eos repudiandae aspernatur excepturi veritatis, id maxime! Consequuntur ullam delectus perspiciatis, vero exercitationem deserunt eligendi accusantium saepe ducimus ipsam animi similique dicta! Cupiditate sapiente dicta mollitia cum rem id placeat praesentium, distinctio deleniti exercitationem non. Magnam tenetur, explicabo architecto perspiciatis deleniti est id illo non ad rem vitae? Nam dolorum animi maxime assumenda nesciunt sit veniam a repudiandae soluta nemo tenetur sapiente, dignissimos nobis ab accusantium fuga nihil et rerum adipisci, fugit repellat! Fugiat laudantium corporis numquam id! Exercitationem error illo inventore unde et. Exercitationem repudiandae ducimus neque voluptatibus quo alias minus dolorum, itaque libero molestiae accusantium perferendis dolores impedit inventore tempore tempora quis repellat eveniet distinctio incidunt iusto! Doloribus similique veritatis aliquam? Doloribus dolorum veniam voluptatem tempore. Repudiandae, porro!</p>
+
+
+
+
+    <script>
+            function changeMode(bgColor, fgColor)
+            {
+                document.bgColor=bgColor;//Arka plan rengini değiştirir
+                document.fgColor=fgColor;//yazının rengini değiştirir.
+            }
+
+
+
+
+        /*
+            function fonksiyonAdı(parametreler){
+                çalışacak kodlar
+            }
+        */
+
+        function selamVer() {
+            console.log('Merhaba JavaScript!')
+        }
+
+        function selamVer2(name) {
+            console.warn('Merhaba ' + name);
+        }
+
+        function yeniSelamVer(name) {
+            if (name == undefined) {
+                console.log('Merhaba JavaScript');
+            } else {
+                console.log(`Merhaba ${name}`);
+            }
+
+
+        }
+
+        // yeniSelamVer();
+        // yeniSelamVer('Engin');
+        // selamVer2('Samet');
+        // selamVer();
+
+
+        function topla(sayı1, sayı2) {
+            console.log(sayı1 + sayı2);
+        }
+
+        // topla(5,60);
+
+        function sum(num1, num2) {
+            let result = num1 + num2;
+            return result;
+        }
+        let sonuc = sum(11,9);
+
+    </script>
+</body>
+
+</html>
