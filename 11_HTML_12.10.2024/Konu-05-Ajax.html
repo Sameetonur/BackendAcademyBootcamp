@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <form action="">
+        <label for="">Ad Soyad:</label>
+        <input type="text" name="" id="">
+
+        <input type="submit" name="" id="" value="Gönder">
+    </form>
+
+    <hr>
+    <input type="button" value="Ajax İle Veri Getir!" id="get-data">
+    <p id="ajax-content" style="border: 1px solid red;">
+        <!-- Buraya İçerik AJAX ile getirilecek -->
+    </p>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).click(function () {
+            $('#get-data').click(function () {
+                $.ajax({
+                    url: 'ajax_content.txt',
+                    success: function (content) {
+                        // console.log(content);
+                        $('#ajax-content').append(content);
+                    },
+                    error: function () {
+                        $('#ajax-content').append('<div>Veri Getirilemedi!</div>');
+                    }
+
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+ <h1>AJAX</h1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sint officia minus quia alias nulla sit cupiditate sapiente, facilis culpa accusamus aliquid vitae maiores voluptas.</P>
+    <ul>
+        <li>Prop1</li>
+        <li>Prop2</li>
+        <li>Prop3</li>
+        <li>Prop4</li>
+    </ul>
+    <a href="https://www.jquery.com">jQuerye Hit</a>

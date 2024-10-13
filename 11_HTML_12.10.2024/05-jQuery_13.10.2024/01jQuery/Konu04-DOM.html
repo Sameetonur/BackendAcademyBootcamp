@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Document Object Model</title>
+</head>
+
+<body style="background-color: black; color: beige;">
+    <form action="">
+        <input type="text" id="metin" value="text box içindeki değer">
+        <hr>
+
+        <textarea name="" id="urun-aciklama">Ürünün Açıklaması</textarea>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <hr>
+        <input type="checkbox" name="" id="onay">Onaylıyorum
+        <hr>
+
+        <select name="" id="kategori">
+            <option value="1">Elektronik</option>
+            <option value="2">Telefon</option>
+            <option value="3">Bilgisayar</option>
+        </select>
+        <hr>
+
+        <input type="radio" name="cinsiyet" id="" value="0" checked>Kadın
+        <input type="radio" name="cinsiyet" id="" value="1">Erkek
+        <hr>
+
+        <a href="https://www.example.com" title="Anasayfaya Gitmek İçin Tıklayınız">Anasayfaya</a>
+        <hr>
+
+        <input type="button" name="" id="btn-sonuc" value="Sonuçları Getir">
+        <input type="button" id="btn-attribute" value="Attribute Getir">
+
+
+    </form>
+    <hr>
+    <h3>Sonuçlar: </h3>
+    <p id="Sonuclar"></p>
+
+    <hr>
+    <div id="hedef-div" style="border: 1px solid rebeccapurple; padding: 10px; margin:10px;">
+        Bu yazı HTML tarafından yazışldı!
+    </div>
+    <input type="button" value="Append" id="append">
+    <input type="button" value="Prepend" id="prepend">
+    <input type="button" value="After" id="after">
+    <input type="button" value="Before" id="before">
+    <br>
+
+    <hr>
+    <input type="button" value="Delete" id="delete">
+    <input type="button" value="Hide" id="hide">
+    <input type="button" value="Show" id="show">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#append').click(function () {
+                $('#hedef-div').append('<h3 style="color:red;"> Append ile eklendi!</h3>')
+
+            });
+            $('#prepend').click(function () {
+                $('#hedef-div').prepend('<h3 style="color:red;"> Prapent ile eklendi!</h3>');
+            });
+            $('#after').click(function () {
+                $('#hedef-div').after('<h3 style="color:red;"> after ile eklendi!</h3>');
+            });
+            $('#before').click(function () {
+                $('#hedef-div').before('<h3 style="color:red;"> before ile eklendi!</h3>');
+            });
+
+            $('#delete').click(function () {
+                $('form').remove();
+            });
+            $('#hide').click(function () {
+                $('form').hide(1700);
+            });
+            $('#show').click(function () {
+                $('form').show(1700);
+            });
+
+            $('#btn-sonuc').click(function () {
+
+                let result = '';
+                result += `Input Değeri: ${$('#metin').val()}`;
+                result += `<br> Onay Durumu: ${$('#urun-aciklama').val()}`;
+                result += `<br> Onay Durumu: ${$('input#onay:checkbox:checked').val()
+                    == 'on' ? 'Onayladınız' : 'Onay Vermediniz!'}`;
+                result += `<br>kategori:; ${$('#kategori').val()} id'li Kategoriyi getir`;
+                result += `<br>Cinsiyet: ${$('input[name=cinsiyet]:checked').val()}`;
+
+
+                $('#Sonuclar').html(result);
+            })
+
+            $('#btn-attribute').click(function () {
+                let values = '';
+                values += `Linkin Href Değeri: ${$('form a').attr('href')}`;
+                values += `<br>Linkin title Değeri: ${$('form a').attr('title')}`;
+
+                $('form a').attr('title', 'Tıklayınız!');
+
+                $('#Sonuclar').html(values);
+            });
+
+        })
+    </script>
+</body>
+
+</html>
