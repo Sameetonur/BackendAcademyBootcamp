@@ -13,7 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .top-container-menu ul {
@@ -166,7 +165,7 @@
 }
 
 .top-4-row-img img {
-    width: ;
+    
     margin-top: 20px;
     margin-left: 100px;
 }
