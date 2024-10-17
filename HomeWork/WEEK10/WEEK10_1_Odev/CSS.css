@@ -273,6 +273,7 @@
 
 .contact-div-right {
     width: 50%;
+    padding: 20px;
 }
 
 .form-container {
@@ -280,12 +281,13 @@
     padding: 20px;
     border-radius: 8px;
     width: 700px;
+
 }
 
 .form-header {
     background-color: #fff3cd;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
     text-align: center;
     font-size: 16px;
     border-radius: 8px;
@@ -350,3 +352,6 @@
     background-color: #ffc107;
     color: black;
 }
+
+
+
