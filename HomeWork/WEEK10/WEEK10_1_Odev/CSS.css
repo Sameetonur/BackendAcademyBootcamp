@@ -62,6 +62,8 @@
     background-color: rgb(241, 219, 15);
 }
 
+/* ----------------------------------------HOME ÜST KISIM------------------------------- */
+
 .top-2-container {
     display: flex;
     flex-direction: column;
@@ -104,6 +106,8 @@
 
     width: 600px;
 }
+
+/* -----------------HOME ORTA KISIM--------------------------- */
 
 .top-3 {
 
@@ -149,6 +153,8 @@
     background-color: white;
     color: black;
 }
+
+/* ---------------HOME EN ALT KISIM------------------------ */
 
 
 .top-4-container {
@@ -294,16 +300,15 @@
 
 }
 
-.form-group
- {
+.form-group {
     margin-bottom: 15px;
 }
 
-.form-group1 label{
+.form-group1 label {
     padding: 10px;
     display: block;
-        margin-bottom: 5px;
-        color: white;
+    margin-bottom: 5px;
+    color: white;
 }
 
 .form-group label {
@@ -311,6 +316,7 @@
     margin-bottom: 5px;
     color: white;
 }
+
 .form-group1 input,
 .form-group1 textarea {
     width: 100%;
@@ -321,8 +327,7 @@
 }
 
 .form-group input,
-.form-group textarea
-{
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
