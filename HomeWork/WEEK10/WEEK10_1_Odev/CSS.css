@@ -52,6 +52,8 @@
 
 }
 
+
+
 .top-container-src button {
     height: 40px;
     width: 40px;
@@ -99,6 +101,7 @@
 }
 
 .top-2-img img {
+
     width: 600px;
 }
 
@@ -165,9 +168,9 @@
 }
 
 .top-4-row-img img {
+    border-radius: 7px;
 
-    margin-top: 20px;
-    margin-left: 100px;
+
 }
 
 .top-4-row-text {
@@ -177,11 +180,14 @@
 
 }
 
+/* ------------------------- BLOG--------------------------------------------------------------- */
+
 .bigdiv-container {
     display: flex;
     padding: 20px;
 }
-.blgtop-2-left{
+
+.blgtop-2-left {
     width: 25%;
     padding: 20px;
 }
@@ -190,13 +196,13 @@
     width: 75%;
     background-color: white;
     padding: 20px;
-   
+
 }
 
 
 
 .blgtop-1-container {
-    
+
     margin-top: 25px;
     display: flex;
     gap: 2rem;
@@ -207,17 +213,135 @@
 
 .blgtop-1-container-row {
     display: flex;
-    
-    border: 1px solid black;
+    height: 300px;
+    box-shadow: 10px 5px 20px rgb(139, 132, 132, 0.2);
+    border: 1px solid rgb(0, 0, 0, 0.2);
     border-radius: 7px;
 }
-.blgtop-1-container-img img{
+
+.blgtop-1-container-img img {
     border-radius: 7px;
 }
-.blgtop-1-container-text{
+
+.blgtop-1-container-text {
     padding: 15px;
 }
+
 .blgtop-1-container-text p {
     padding-left: 10px;
     padding-top: 15px;
+}
+
+.blgtop-2-buttons ul {
+
+    list-style: none;
+    text-align: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.295);
+    border-radius: 8px;
+}
+
+.blgtop-2-buttons ul li {
+
+    padding: 5px;
+    background-color: white;
+    column-rule: black;
+    border-radius: 8px;
+
+}
+
+
+.blgtop-2-buttons ul li:hover {
+    background-color: rgb(227, 230, 230);
+}
+
+/* -------------------------------CONTACT------------------------------------ */
+.contact-all-container {
+    display: flex;
+    padding: 25px;
+}
+
+.contact-div-left {
+    width: 50%;
+    padding: 20px;
+}
+
+.contact-div-right {
+    width: 50%;
+}
+
+.form-container {
+    background-color: #004d66;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+}
+
+.form-header {
+    background-color: #fff3cd;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.form-group1 {
+    margin-bottom: 15px;
+    display: flex;
+    color: white;
+    border-radius: 5px;
+    justify-content: space-between;
+
+}
+
+.form-group
+ {
+    margin-bottom: 15px;
+}
+
+.form-group1 label{
+    padding: 10px;
+    display: block;
+        margin-bottom: 5px;
+        color: white;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+.form-group1 input,
+.form-group1 textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #004d66;
+    color: #ffc107;
+    border: 1px solid #ffc107;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffc107;
+    color: black;
 }
