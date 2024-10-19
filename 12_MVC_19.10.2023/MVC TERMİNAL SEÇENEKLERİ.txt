@@ -1,0 +1,6 @@
+1-Yöntem  terminalden TopLevelStantment kullanmadan
+$ dotnet mvc -o ProjeAdi --use-program-main
+2-Yöntem terminalden TopLevelStantment ile
+$$ dotnet mvc -o ProjeAdi
+3-Yöntem C# DevKit kullanarap 
+ctrl-shft+p new project  sonrasında mvc yazarak oluşturabiliriz
