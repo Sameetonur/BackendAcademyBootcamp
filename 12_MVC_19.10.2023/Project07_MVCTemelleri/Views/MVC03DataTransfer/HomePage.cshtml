@@ -1,0 +1,50 @@
+@model HomePageModel
+
+@{
+    Layout = "_CustomLayout";
+    ViewData["Title"] = "HomePage";
+    List<Category> categoryList = Model.Categories;
+    List<Product> products = Model.Products;
+    string message = Model.Message;
+    Campaign campaign = Model.Campaign;
+}
+
+
+<h1 class="page-title">Home Page</h1>
+
+<div class="content-container">
+    <div class="content-left">
+        <ul class="category-list">
+            @foreach (var kategori in categoryList)
+            {
+                <li>@kategori.Name</li>
+            }
+        </ul>
+        <div class="campaign">
+            <img class="compaign-image" src="@campaign.ImageUrl" alt="">
+            <h4 class="campaign-title">@campaign.Title</h4>
+            <p class="campaign-description">@campaign.Description</p>
+        </div>
+        <div class="message-contain">
+            <div class="message">
+                <p class="message-text">@message</p>
+            </div>
+        </div>
+    </div>
+    <div class="content-right">
+       @foreach(var product in products)
+       {
+        <div class="product-card">
+            <div class="product-name">@product.Name
+
+            </div>
+            <div class="product-price">
+                    @product.Price
+            </div>
+
+        </div>
+       }
+
+
+    </div>
+</div>
