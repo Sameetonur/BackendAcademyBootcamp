@@ -4,7 +4,7 @@ GO
 if DB_ID('PortfolioDb') is not null
 begin
     alter database PortfolioDb set single_user with rollback immediate
-    drop database PorfolioDb
+    drop database PortfolioDb
 end
 go
 
@@ -169,3 +169,33 @@ values
     ('Proje 7', 'Proje 7 Açıklaması', 'https://www.github.com/project7', 'http://localhost:5100/ui/img/projects/project7.jpg'),
     ('Proje 8', 'Proje 8 Açıklaması', 'https://www.github.com/project8', 'http://localhost:5100/ui/img/projects/project8.jpg')
 go
+
+CREATE TABLE Contacts
+(
+    Id INT PRIMARY KEY identity,
+    Name NVARCHAR(100) not null,
+    Email NVARCHAR(100) not null,
+    Subject NVARCHAR(100) not null,
+    Message NVARCHAR(MAX) not null,
+    IsRead bit not null default 0,
+    SendingTime datetime not null default getdate(),
+    ContactId int null FOREIGN key REFERENCES Contacts(Id)
+)
+go
+
+insert into Contacts
+    (Name, Email,Subject, Message)
+VALUES
+    ('Sezen Aksu', 'sezen@gmail.com', 'Proje Teklifi', 'Proje teklifimizi paylaşmak isteriz!'),
+    ('Samet Önür', 'samet@gmail.com', 'Kod yazma teklifi', 'Bizm Projemize katılmanızı istiyorum'),
+    ('Ahmet Kaya', 'ahmet@gmail.com', 'Şarkı Teklifi', 'Şarkı teklifimizi paylaşmak isteriz!')
+
+GO
+
+insert into Contacts
+    (Name, Email,Subject, Message, ContactId)
+VALUES
+    ('Kemal Kodyazan', 'info@kemalkodyazan.com', 'YNT=olur',  ' seszen hanım Proje teklifimizi paylaşmak isteriz!',1),
+    ('Kemal Kodyazan', 'samet@gmail.com', 'YNT=olur', ' Projenize katılmanızı istiyorum',2)
+   
+    
