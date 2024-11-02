@@ -195,7 +195,28 @@ GO
 insert into Contacts
     (Name, Email,Subject, Message, ContactId)
 VALUES
-    ('Kemal Kodyazan', 'info@kemalkodyazan.com', 'YNT=olur',  ' seszen hanım Proje teklifimizi paylaşmak isteriz!',1),
-    ('Kemal Kodyazan', 'samet@gmail.com', 'YNT=olur', ' Projenize katılmanızı istiyorum',2)
+    ('Kemal Kodyazan', 'info@kemalkodyazan.com', 'YNT=olur', ' seszen hanım Proje teklifimizi paylaşmak isteriz!', 1),
+    ('Kemal Kodyazan', 'samet@gmail.com', 'YNT=olur', ' Projenize katılmanızı istiyorum', 2)
    
     
+-- select *
+-- from AppSettings
+
+-- select *
+-- from Categories
+
+-- select *
+-- from Socials
+
+-- select *
+-- from Skills
+
+-- select *
+-- from Services
+
+-- select *
+-- from Projects
+
+-- select *
+-- from Contacts
+
