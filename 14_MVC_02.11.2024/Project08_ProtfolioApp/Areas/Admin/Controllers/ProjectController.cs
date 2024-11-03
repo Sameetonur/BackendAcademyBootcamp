@@ -5,6 +5,7 @@ using Project08_ProtfolioApp.Models;
 
 namespace Project08_ProtfolioApp.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class ProjectController : Controller
     {
         // GET: ProjectController
