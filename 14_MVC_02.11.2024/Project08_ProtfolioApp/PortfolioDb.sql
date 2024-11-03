@@ -122,7 +122,9 @@ values
     ('SEO Hizmeti', 'Arama Motoru Optimizasyonu', 'activity'),
     ('Web Uygulamaları', 'İsteğe özel web uygulamaları geliştirme', 'bounding-box-circles'),
     ('Server Yönetimi', 'Sunucuların oluşturulup bakım ve yönetimlerinin yapılması', 'calendar4-week'),
-    ('SPA', 'Single Page Application uygulamalarının geliştirilmesi', 'broadcast')
+    ('SPA', 'Single Page Application uygulamalarının geliştirilmesi', 'broadcast'),
+    ('Service', 'Servis Açıklaması', 'arrow-clockwise')
+    
 go
 
 create table Categories
