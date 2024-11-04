@@ -51,17 +51,10 @@ public class HomeController : Controller
             AppSetting = appSetting,
             Categories = categories,
             Projects = project,
-            Services=service,
-            Skills=skill,
-            Socials=social
+            Services = service,
+            Skills = skill,
+            Socials = social
         };
-           
-
-
-        
-
-
-
 
         return View(model);
     }
