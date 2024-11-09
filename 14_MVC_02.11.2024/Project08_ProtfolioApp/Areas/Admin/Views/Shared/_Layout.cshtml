@@ -10,6 +10,7 @@
 
     <!-- Favicon -->
     @await Html.PartialAsync("_StylePartial")
+    
 </head>
 
 <body>
@@ -62,6 +63,7 @@
 
     <!-- JavaScript Libraries -->
     @await Html.PartialAsync("_ScriptPartial")
+    @RenderSection("ScriptsSection", required: false)
 </body>
 
 </html>

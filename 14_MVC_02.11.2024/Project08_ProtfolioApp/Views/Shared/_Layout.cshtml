@@ -7,21 +7,22 @@
     <title>Index - Arsha Bootstrap Template</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    @* @await Html.PartialAsync("_StylesParial"); *@
-    <partial name="_StylesPartial" />
+    @await Html.PartialAsync("_StylesPartial")
+    
 </head>
 
 <body class="index-page">
 
-    @await Html.PartialAsync("_HeaderPartial");
+    @await Html.PartialAsync("_HeaderPartial")
 
     <main class="main">
         @RenderBody()
     </main>
 
-    @await Html.PartialAsync("_FooterPartial");
-    @await Html.PartialAsync("_ScroolPrePartial");
-    @await Html.PartialAsync("_ScriptPartial");
+    @await Html.PartialAsync("_FooterPartial")
+    @await Html.PartialAsync("_ScroolPrePartial")
+    @await Html.PartialAsync("_ScriptPartial")
+
 
     <!-- Vendor JS Files -->
     

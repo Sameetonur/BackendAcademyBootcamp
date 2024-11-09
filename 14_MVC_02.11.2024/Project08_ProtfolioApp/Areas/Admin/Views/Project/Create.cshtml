@@ -1,0 +1,73 @@
+@model AddProjectViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container-fluid pt-4 px-4">
+    <div class="col-12">
+        <div class="bg-light rounded h-100 p-4">
+            <div class="d-flex justify-content-between mb-4">
+                <h6 class="">Yeni Proje</h6>
+                <a asp-area="Admin" asp-controller="Project" asp-action="Index"
+                    class="btn btn-primary btn-sm">Vazgeç</a>
+            </div>
+
+            <form asp-area="Admin" asp-controller="Project" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <!-- Form Left -->
+                    <div class="col-md-8 col-sm-6">
+                        <div class="col-12">
+                            <label for="inputProjectName" class="form-label">Proje Adı</label>
+                            <input asp-for="Name" class="form-control">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputProjectDescription" class="form-label">Proje Açıklaması</label>
+                            <input asp-for="Description" class="form-control" >
+                            <span class="text-danger" asp-validation-for="Description"></span>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputGithubLink" class="form-label">Proje GitHub Link</label>
+                            <input asp-for="GithubUrl" class="form-control" >
+                        </div>
+                        <div class="form-check mt-3">
+                            <input asp-for="IsActive" class="form-check-input" >
+                            <label class="form-check-label" for="projectActiveCheck">Aktif</label>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                        </div>
+                    </div>
+
+                    <!-- Form Right -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="mb-3">
+                            <label for="categorySelect" class="form-label">Kategori</label>
+                            <select asp-for="CategoryId" asp-items="@Model.CategoryList">
+
+                            </select>
+                        </div>
+                        <div class="row mb-4">
+                            <label for="image" class="form-label">Resim</label>
+                            <input asp-for="Image" class="form-control" type="file" id="image">
+                            <img class="m-3" width="250" id="image-preview" src="" alt="Image Preview"
+                                style="max-width: 100%; margin-top: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section ScriptsSection {
+    <script>
+        // Image preview function
+        $("#image").on("change", function (e) {
+            const selectedFile = e.target.files[0];
+            if (selectedFile) {
+                $("#image-preview").attr("src", window.URL.createObjectURL(selectedFile));
+            }
+        });
+    </script>
+}
