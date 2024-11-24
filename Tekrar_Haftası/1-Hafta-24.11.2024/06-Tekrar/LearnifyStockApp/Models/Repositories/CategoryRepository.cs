@@ -18,10 +18,10 @@ public class CategoryRepository
     /// Tüm Kategorileri Döndürür.
     /// </summary>
     /// <returns></returns>
-    public async Task<IEnumerable<Category>> GetAllAsync()
+    public async Task<IEnumerable<CategoryViewModel>> GetAllAsync()
     {
         string query = "Select * From Categories";
-        return await _dbConnection.QueryAsync<Category>(query);
+        return await _dbConnection.QueryAsync<CategoryViewModel>(query);
     }
 
     /// <summary>
