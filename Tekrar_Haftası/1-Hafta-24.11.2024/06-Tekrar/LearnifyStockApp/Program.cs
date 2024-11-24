@@ -1,4 +1,5 @@
 using System.Data;
+using LearnifyStockApp.Models.Repositories;
 using Microsoft.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IDbConnection>(options=> new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnectionn")));
+
+//Repositories
+builder.Services.AddScoped<CategoryRepository>();
 
 
 var app = builder.Build();
