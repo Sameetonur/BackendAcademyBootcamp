@@ -104,9 +104,9 @@ public class CategoryRepository
     /// EN ÇOK SATIŞ YAPILAN KATEGORİ ADINI VE SATIŞ TUTARINI DÖNDÜRÜR.
     /// </summary>
     /// <returns></returns>
-    public async Task<(string CategoryName , decimal TotalSales)> GetTopSellingCategoryAsync()
+    public async Task<(string CategoryName, decimal TotalSales)> GetTopSellingCategoryAsync()
     {
-        string query= @"
+        string query = @"
                 SELECT TOP (1)
         c.Name as CategoryName,
             SUM(s.Quantity*s.UnitPrice) AS TotalSales
@@ -117,8 +117,8 @@ public class CategoryRepository
             ORDER BY SUM
             (s.Quantity*s.UnitPrice) DESC
         ";
-        return await _dbConnection.QueryFirstOrDefaultAsync< (string CategoryName , decimal TotalSales)> (query);
-    
+        return await _dbConnection.QueryFirstOrDefaultAsync<(string CategoryName, decimal TotalSales)>(query);
+
 
     }
 
@@ -135,4 +135,4 @@ public class CategoryRepository
     //         IsDeleted = isDeleted
     //     });
 
-} 
+}

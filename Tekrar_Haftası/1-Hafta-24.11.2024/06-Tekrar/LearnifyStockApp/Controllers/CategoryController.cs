@@ -13,12 +13,15 @@ namespace LearnifyStockApp.Controllers
             _categoryRepository = categoryRepository;
         }
 
+        [HttpGet]
         public async Task<ActionResult> Index()
         {
             var categories = await _categoryRepository.GetAllAsync();
 
             return View();
         }
+
+        [HttpGet]
         public ActionResult Add()
         {
             return View();

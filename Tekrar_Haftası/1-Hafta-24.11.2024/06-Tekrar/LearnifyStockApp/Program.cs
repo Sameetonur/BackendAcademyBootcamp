@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IDbConnection>(options=> new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnectionn")));
+builder.Services.AddScoped<IDbConnection>(options=> new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //Repositories
 builder.Services.AddScoped<CategoryRepository>();
