@@ -59,10 +59,12 @@ public class ProductRepository
             SELECT
                 p.Id,
                 p.Name,
+                p.Description,
                 p.StockQuantity,
                 p.MinimumStockLevel,
                 p.Price,
                 p.IsDeleted,
+                p.UpdatedAt,
                 c.Name AS CategoryName,
                 s.Name AS SupplierName
             FROM Products p JOIN Categories c ON p.CategoryId=c.Id
@@ -102,4 +104,9 @@ public class ProductRepository
     }
 
     // Buraya temel işlemler dışında ihtiyaç duyacağımız Product operasyonları için gerekli metotları yazabiliriz. GetTotalProductsCount, GetProductsByCategory...
+
+    public async Task<int> GetProductsCountAsync()
+    {
+        return await _dbConnection.QueryFirstOrDefaultAsync<int>("SELECT COUNT(*) FROM Products WHERE IsDeleted=@IsDeleted", new { IsDeleted = false });
+    }
 }

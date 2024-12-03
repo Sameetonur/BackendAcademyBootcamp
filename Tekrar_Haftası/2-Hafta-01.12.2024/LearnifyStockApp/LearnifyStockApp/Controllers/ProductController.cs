@@ -68,5 +68,65 @@ namespace LearnifyStockApp.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public async Task<ActionResult> Add(AddProductViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _productRepository.AddAsync(model);
+                return RedirectToAction("Index");
+            }
+            model.CategoryList = await GenerateCategoryList();
+            model.SupplierList = await GenerateSupplierList();
+            return View(model);
+        }
+
+        public async Task<ActionResult> Edit(int id)
+        {
+            var product = await _productRepository.GetAsync(id);
+            var model = new UpdateProductViewModel
+            {
+                Id = product.Id,
+                Description = product.Description,
+                MinimumStockLevel = product.MinimumStockLevel,
+                Name = product.Name,
+                Price = product.Price,
+                StockQuantity = product.StockQuantity,
+                UpdatedAt = product.UpdatedAt,
+                CategoryList = await GenerateCategoryList(),
+                SupplierList = await GenerateSupplierList()
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Edit(UpdateProductViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _productRepository.UpdateAsync(model);
+                return RedirectToAction("Index");
+            }
+            model.CategoryList = await GenerateCategoryList();
+            model.SupplierList = await GenerateSupplierList();
+            return View(model);
+        }
+
+        public async Task<ActionResult> SoftDelete(int id)
+        {
+            var isDeleted = await _productRepository.SoftDeleteAsync(id);
+            return RedirectToAction("Index", new { Id = isDeleted });
+        }
+
+        public async Task<ActionResult> HardDelete(int id)
+        {
+            await _productRepository.HardDeleteAsync(id);
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
     }
 }
